@@ -1,1 +1,26 @@
+INP 
+        BRZ PRINTZERO
+        STA MAX
 
+LOOP    INP
+        BRZ END
+        STA VALUE
+        SUB MAX
+        BRP UPDATE
+        BRA LOOP
+
+UPDATE  LDA VALUE
+        STA MAX 
+        BRA LOOP
+
+END     LDA MAX
+        OUT
+        HLT
+
+PRINTZERO  LDA ZERO
+           OUT
+           HLT
+
+VALUE  DAT -500
+MAX    DAT -500
+ZERO   DAT 0
