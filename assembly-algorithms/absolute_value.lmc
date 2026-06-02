@@ -1,1 +1,12 @@
+INP 
+      STA N
+      BRP POS
+      LDA ZERO
+      SUB N 
+      BRA OUT
+POS   LDA N
+OUT   OUT
+      HLT
 
+N     DAT 0
+ZERO  DAT 0
