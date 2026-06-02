@@ -1,1 +1,19 @@
+INP 
+      STA A 
+      INP 
+      STA B
 
+      LDA A 
+      SUB B 
+      BPR A_IS_LARGER
+
+      LDA B 
+      OUT
+      HLT
+
+A_IS_LARGER  LDA A 
+             OUT
+             HLT
+
+A DAT 0 
+B DAT 0
